@@ -172,4 +172,26 @@ public class IntStackShare {
 			break;
 		}
 	}
+	
+	
+	public static void main(String[] args) {
+		IntStackShare jieun = new IntStackShare(4);
+		jieun.push(AorB.StackA, 3);
+		jieun.push(AorB.StackB, 5);
+		jieun.push(AorB.StackA, 4);
+		jieun.push(AorB.StackB, 7);
+		
+		System.out.println(jieun.pop(AorB.StackB));
+		
+		IntStackShare minjong = new IntStackShare(6);
+		minjong.push(AorB.StackA, 1);
+		minjong.push(AorB.StackA, 2);
+		minjong.push(AorB.StackA, 3);
+		minjong.push(AorB.StackB, 4);
+		minjong.push(AorB.StackB, 5);
+		minjong.push(AorB.StackB, 6);
+		
+		minjong.dump(AorB.StackA);
+		minjong.dump(AorB.StackB);
+	}
 }
