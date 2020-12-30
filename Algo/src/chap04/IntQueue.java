@@ -101,4 +101,12 @@ public class IntQueue {
 			System.out.println();
 		}
 	}
+	
+	//큐에서 x를 검색해 머리부터 몇번 째인가(찾지 못하면 0)를 반환
+	public int search(int x) {
+		for (int i=0; i<num; i++)
+			if(que[(i + front) % max] == x)	//검색성공
+				return i+1;
+		return 0;	//검색실패
+	}
 }
